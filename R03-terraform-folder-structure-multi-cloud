@@ -1,0 +1,257 @@
+Terraform Folder Structure - Multi Cloud Support
+************************************************
+
+    terraform/
+    |-- backend/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- modules/
+    |   |-- aws/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- gcp/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- oci/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- azure/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- vpc/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- ec2/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- rds/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- mongodb/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- eks/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- documentdb/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- sonarqube/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- trivy/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |
+    |-- api_gateway/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- lambda/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- iam/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- s3/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- kubernetes/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- argocd/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- codecommit/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- codepipeline/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- codebuild/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- codedeploy/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- sonarqube/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- trivy/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- environments/
+    |   |-- dev/
+    |   |   |-- main.tf
+    |   |   |-- variables.tfvars
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- production/
+    |   |   |-- main.tf
+    |   |   |-- variables.tfvars
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- staging/
+    |       |-- main.tf
+    |       |-- variables.tfvars
+    |       |-- outputs.tf
+    |
+    |-- global/
+    |   |-- main.tf
+    |   |-- variables.tf
+    |   |-- outputs.tf
+    |
+    |-- providers.tf
+    |-- terraform.tfvars
+    |-- variables.tf
+    |-- outputs.tf
+    |-- vault/
+        |-- main.tf
+        |-- variables.tf
+        |-- outputs.tf
+
+
+Core Infrastructure Components
+******************************
+
+    modules/
+        vpc/
+        ec2/
+        rds/
+        mongodb/
+        eks/
+        documentdb/
+
+Multi Cloud Providers Configuration (AWS/GCP/OCI/Azure)
+*******************************************************
+    modules/aws/
+    modules/gcp/
+    modules/oci/
+    modules/azure/
+
+AWS Services Integration
+************************
+
+    api_gateway/
+        main.tf
+        variables.tf
+        outputs.tf
+    lambda/
+        main.tf
+        variables.tf
+        outputs.tf
+
+Identity and Access Management
+******************************
+
+    iam/
+        main.tf
+        variables.tf
+        outputs.tf
+
+AWS Services Integration
+************************
+
+    codecommit/
+    codepipeline/
+    codebuild/
+    codedeploy/
+
+Deployment and Release Management
+*********************************
+
+    argocd/
+    environments/
+        dev/
+        production/
+        staging/
+
+Remote State Management with DynamoDB
+*************************************
+
+    backend/
+        main.tf
+        variables.tf
+        outputs.tf
+
+Source Code Management (SCM) and CI/CD Integration
+**************************************************
+
+    github/
+    jenkins/
+
+Cloud Security and Quality Scanning
+***********************************
+
+    sonarqube/
+    trivy/
+
+Global Configurations
+*********************
+
+    global/
+        main.tf
+        variables.tf
+        outputs.tf
+
+Providers Configuration
+***********************
+    
+    providers.tf
+
+
+Terraform State Management (Optional)
+*************************************
+
+    vault/
+        main.tf
+        variables.tf
+        outputs.tf
