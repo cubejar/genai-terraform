@@ -1,5 +1,6 @@
 Terraform Folder Structure
 **************************
+
     terraform/
     |-- backend/
     |   |-- main.tf
@@ -28,6 +29,11 @@ Terraform Folder Structure
     |   |   |-- outputs.tf
     |   |
     |   |-- eks/
+    |   |   |-- main.tf
+    |   |   |-- variables.tf
+    |   |   |-- outputs.tf
+    |   |
+    |   |-- documentdb/
     |       |-- main.tf
     |       |-- variables.tf
     |       |-- outputs.tf
@@ -112,16 +118,19 @@ Terraform Folder Structure
         |-- variables.tf
         |-- outputs.tf
 
+
+
 # Categorization
 
 1. Core Infrastructure Components
 *********************************
     modules/
-    vpc/
-    ec2/
-    rds/
-    mongodb/
-    eks/
+        vpc/
+        ec2/
+        rds/
+        mongodb/
+        documentdb/
+        eks/
     api_gateway/
     lambda/
     iam/
@@ -133,9 +142,9 @@ Deployment and Release Management
 
     argocd/
     environments/
-    dev/
-    production/
-    staging/
+        dev/
+        production/
+        staging/
 
 Integration with Source Code Management (SCM) and CI/CD
 *******************************************************
@@ -149,16 +158,16 @@ Integration with Source Code Management (SCM) and CI/CD
 Remote State Management with DynamoDB
 *************************************
     backend/
-    main.tf
-    variables.tf
-    outputs.tf
+        main.tf
+        variables.tf
+        outputs.tf
 
 Global Configurations
 *********************
     global/
-    main.tf
-    variables.tf
-    outputs.tf
+        main.tf
+        variables.tf
+        outputs.tf
 
 Providers Configuration
 ***********************
@@ -167,6 +176,6 @@ Providers Configuration
 Terraform State Management (Optional)
 *************************************
     vault/
-    main.tf
-    variables.tf
-    outputs.tf
+        main.tf
+        variables.tf
+        outputs.tf
