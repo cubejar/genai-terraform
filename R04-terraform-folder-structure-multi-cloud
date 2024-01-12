@@ -1,0 +1,220 @@
+Terraform Folder Structure - Multi Cloud Support
+************************************************
+    terraform/
+        |-- infrastructure/
+        |   |-- backend/
+        |   |   |-- main.tf
+        |   |   |-- variables.tf
+        |   |   |-- outputs.tf
+        |   |
+        |   |-- providers.tf
+        |   |-- terraform.tfvars
+        |   |-- variables.tf
+        |   |-- outputs.tf
+        |
+        |-- environments/
+        |   |-- dev/
+        |   |   |-- main.tf
+        |   |   |-- variables.tfvars
+        |   |   |-- outputs.tf
+        |   |
+        |   |-- production/
+        |   |   |-- main.tf
+        |   |   |-- variables.tfvars
+        |   |   |-- outputs.tf
+        |   |
+        |   |-- staging/
+        |       |-- main.tf
+        |       |-- variables.tfvars
+        |       |-- outputs.tf
+        |
+        |-- global/
+        |   |-- main.tf
+        |   |-- variables.tf
+        |   |-- outputs.tf
+        |
+        |-- vault/
+        |   |-- main.tf
+        |   |-- variables.tf
+        |   |-- outputs.tf
+        |
+        |-- cloud_providers/
+        |   |-- aws/
+        |   |   |-- modules/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- vpc/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- ec2/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- rds/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- eks/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- documentdb/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- api_gateway/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- lambda/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- iam/
+        |   |   |   |-- main.tf
+        |   |   |   |-- variables.tf
+        |   |   |   |-- outputs.tf
+        |   |   |
+        |   |   |-- s3/
+        |   |       |-- main.tf
+        |   |       |-- variables.tf
+        |   |       |-- outputs.tf
+        |
+        |   |-- gcp_placeholder/  # Placeholder for GCP resources
+        |   |   |-- main.tf
+        |   |   |-- variables.tf
+        |   |   |-- outputs.tf
+        |
+        |   |-- oci_placeholder/  # Placeholder for OCI resources
+        |   |   |-- main.tf
+        |   |   |-- variables.tf
+        |   |   |-- outputs.tf
+        |
+        |   |-- azure_placeholder/  # Placeholder for Azure resources
+            |   |-- main.tf
+            |   |-- variables.tf
+            |   |-- outputs.tf
+            |
+            |-- kubernetes/
+            |   |-- main.tf
+            |   |-- variables.tf
+            |   |-- outputs.tf
+            |
+            |-- argocd/
+            |   |-- main.tf
+            |   |-- variables.tf
+            |   |-- outputs.tf
+            |
+            |-- applications/
+                |-- mongodb/
+                |   |-- main.tf
+                |   |-- variables.tf
+                |   |-- outputs.tf
+                |
+                |-- sonarqube/
+                |   |-- main.tf
+                |   |-- variables.tf
+                |   |-- outputs.tf
+                |
+                |-- trivy/
+                    |-- main.tf
+                    |-- variables.tf
+                    |-- outputs.tf
+
+
+
+Infrastructure Configuration
+****************************
+
+    infrastructure/
+        backend/
+        providers.tf
+        terraform.tfvars
+        variables.tf
+        outputs.tf
+
+Environments
+************
+
+    environments/
+        dev/
+        production/
+        staging/
+
+Global Configuration
+********************
+    global/
+    main.tf
+    variables.tf
+    outputs.tf
+
+Vault Configuration
+*******************
+
+    vault/
+        main.tf
+        variables.tf
+        outputs.tf
+
+Cloud Providers
+***************
+    cloud_providers/
+        AWS:
+            aws/
+            modules/
+            vpc/
+            ec2/
+            rds/
+            eks/
+            documentdb/
+            api_gateway/
+            lambda/
+            iam/
+            s3/
+
+        GCP Placeholder:
+            gcp_placeholder/
+
+        OCI Placeholder:
+            oci_placeholder/
+
+        Azure Placeholder:
+            azure_placeholder/
+
+Container Orchestration and Tools
+*********************************
+    kubernetes/
+        main.tf
+        variables.tf
+        outputs.tf
+        argocd/
+        main.tf
+        variables.tf
+        outputs.tf
+
+Applications
+************
+    applications/
+        mongodb/
+            main.tf
+            variables.tf
+            outputs.tf
+
+        sonarqube/
+            main.tf
+            variables.tf
+            outputs.tf
+        trivy/
+            main.tf
+            variables.tf
+            outputs.tf
