@@ -132,10 +132,8 @@ Terraform Folder Structure - Multi Cloud Support
                     |-- outputs.tf
 
 
-
 Infrastructure Configuration
 ****************************
-
     infrastructure/
         backend/
         providers.tf
@@ -145,7 +143,6 @@ Infrastructure Configuration
 
 Environments
 ************
-
     environments/
         dev/
         production/
@@ -154,13 +151,12 @@ Environments
 Global Configuration
 ********************
     global/
-    main.tf
-    variables.tf
-    outputs.tf
+        main.tf
+        variables.tf
+        outputs.tf
 
 Vault Configuration
 *******************
-
     vault/
         main.tf
         variables.tf
@@ -197,13 +193,15 @@ Container Orchestration and Tools
         main.tf
         variables.tf
         outputs.tf
-        argocd/
+
+    argocd/
         main.tf
         variables.tf
         outputs.tf
 
 Applications
 ************
+
     applications/
         mongodb/
             main.tf
@@ -214,6 +212,7 @@ Applications
             main.tf
             variables.tf
             outputs.tf
+
         trivy/
             main.tf
             variables.tf
