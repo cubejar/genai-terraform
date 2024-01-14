@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongodb
+  namespace: monitoring
+  labels:
+    k8s-app: mongodb
+spec:
+  ports:
+  - name: jmx
+    port: 9001
+    protocol: TCP
+    targetPort: 9001
